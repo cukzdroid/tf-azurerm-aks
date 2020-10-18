@@ -27,5 +27,5 @@ variable "dns_prefix" {
 }
 
 variable "admin_username" {
-    default = "aguscuk"
+    default = "cukzdroid"
 }
