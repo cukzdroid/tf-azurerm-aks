@@ -150,3 +150,6 @@ aks-default-75135322-0   Ready    agent   18m   v1.13.12
 aks-default-75135322-1   Ready    agent   18m   v1.13.12
 aks-default-75135322-2   Ready    agent   18m   v1.13.12
 ```
+
+helm
+https://medium.com/doku-insight/kubernetes-helm-cara-menginstal-dan-operasi-dasar-d926f46185f1
