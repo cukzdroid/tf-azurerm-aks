@@ -4,16 +4,16 @@ provider "azurerm" {
 }
 
 ## Azure resource group for the kubernetes cluster ##
-resource "azurerm_resource_group" "km-aks-cluster01" {
+resource "azurerm_resource_group" "cukzaks" {
   name     = var.resource_group_name
   location = var.location
 }
 
 ## AKS kubernetes cluster ##
-resource "azurerm_kubernetes_cluster" "km-aks-cluster01" { 
+resource "azurerm_kubernetes_cluster" "cukzaks" { 
   name                = var.cluster_name
-  resource_group_name = azurerm_resource_group.km-aks-cluster01.name
-  location            = azurerm_resource_group.km-aks-cluster01.location
+  resource_group_name = azurerm_resource_group.cukzaks.name
+  location            = azurerm_resource_group.cukzaks.location
   dns_prefix          = var.dns_prefix
 
   linux_profile {
@@ -67,27 +67,27 @@ EOF
 
 # Example attributes available for output
 output "id" {
-    value = "${azurerm_kubernetes_cluster.km-aks-cluster01.id}"
+    value = "${azurerm_kubernetes_cluster.cukzaks.id}"
 }
 
 output "client_key" {
-  value = "${azurerm_kubernetes_cluster.km-aks-cluster01.kube_config.0.client_key}"
+  value = "${azurerm_kubernetes_cluster.cukzaks.kube_config.0.client_key}"
 }
 
 output "client_certificate" {
-  value = "${azurerm_kubernetes_cluster.km-aks-cluster01.kube_config.0.client_certificate}"
+  value = "${azurerm_kubernetes_cluster.cukzaks.kube_config.0.client_certificate}"
 }
 
 output "cluster_ca_certificate" {
-  value = "${azurerm_kubernetes_cluster.km-aks-cluster01.kube_config.0.cluster_ca_certificate}"
+  value = "${azurerm_kubernetes_cluster.cukzaks.kube_config.0.cluster_ca_certificate}"
 }
 
 output "kube_config" {
-  value = azurerm_kubernetes_cluster.km-aks-cluster01.kube_config_raw
+  value = azurerm_kubernetes_cluster.cukzaks.kube_config_raw
 }
 
 output "host" {
-  value = azurerm_kubernetes_cluster.km-aks-cluster01.kube_config.0.host
+  value = azurerm_kubernetes_cluster.cukzaks.kube_config.0.host
 }
 
 output "configure" {

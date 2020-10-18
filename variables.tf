@@ -9,13 +9,13 @@ variable location {
 
 ## Resource group variables ##
 variable resource_group_name {
-  default = "km-aks-cluster01-rg"
+  default = "cukzaksrg"
 }
 
 
 ## AKS kubernetes cluster variables ##
 variable cluster_name {
-  default = "km-aks-cluster01"
+  default = "cukzaks"
 }
 
 variable "agent_count" {
@@ -23,7 +23,7 @@ variable "agent_count" {
 }
 
 variable "dns_prefix" {
-  default = "km-aks-cluster01"
+  default = "cukzaks"
 }
 
 variable "admin_username" {
